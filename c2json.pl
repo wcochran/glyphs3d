@@ -23,7 +23,7 @@ my @VERTS;
 
 open($fh, "glyph_$CHAR.c") or die "$!\n";
 for (<$fh>) {
-    if (/(\d+\.\d+),\s+(\d+\.\d+),\s+(\d+\.\d+)/) {
+    if (/([-+]?\d+\.\d+),\s+([-+]?\d+\.\d+),\s+([-+]?\d+\.\d+)/) {
 	push @VERTS, ($1,$2,$3); 
 	$N++;
     }
