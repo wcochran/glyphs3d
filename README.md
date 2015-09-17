@@ -9,7 +9,7 @@ Upper case letters and digits have a height of 1 (above the base line).
 Each glyph has a different width (see headers).
 
 # Authors
-  * Wayne Cochran  (wcochran@vancouver.wsu.edu)
+  * Wayne Cochran  (wcochran@wsu.edu)
   * Adam Bennet
   * Gabriel Dunham
   * Eric Klinginsmith
@@ -24,6 +24,7 @@ Each glyph has a different width (see headers).
 # Modification History
    * Sept 26, 2013..... Created.
    * Aug 8, 2014 ...... Created converter to JSON
+   * Sep 27, 2015 ..... Generate JS (instead of JSON) -- easier to include in html.
 
 # Buidling
 
@@ -36,17 +37,17 @@ Each glyph has a different width (see headers).
 
     make clobber
 
-  * To convert C source for glyphs into JSON
+  * To convert C source for glyphs into JS
 
-   ./mkjson.sh
+   ./mkjs.sh
 
 # Files in archive:
 
-* `README`This file.
+* `README` This file.
 * `Makefile`  for building static library glyph.a and header file glyph.h
 * `glyph_[0-9A-Z].h` C headers for individual glyphs
 * `glyph_[0-9A-Z].c` C source for individual glyphs
 * `mkheader.pl` Perl script that makes glyph.h from all the glyph_[0-9A-Z].h's
-* `glyph_[0-9A_Z].json`  JSON version of glyph
-* `c2json.pl`  Perl script that converts a glyph from C to JSON
-* `mkjson.pl`  bash script that converts all C glyphs to JSON
+* `glyph_[0-9A_Z].js`  JavaScript version of glyph
+* `c2js.pl`  Perl script that converts a glyph from C to JavaScript
+* `mkjs.pl`  bash script that converts all C glyphs to JavaScript
